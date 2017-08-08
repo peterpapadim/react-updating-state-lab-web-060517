@@ -20,7 +20,7 @@ class YouTubeDebugger extends React.Component{
       settings: {
         ...this.state.settings,
         bitrate: 12,
-      },
+      }
     });
   }
 
@@ -28,8 +28,11 @@ class YouTubeDebugger extends React.Component{
     this.setState({
       settings: {
         ...this.state.settings,
-        video: {resolution: '720p'},
-      },
+        video: {
+          ...this.state.settings.video,
+          resolution: '720p'
+        }
+      }
     });
   }
 
